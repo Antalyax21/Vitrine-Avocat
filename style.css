@@ -1,0 +1,525 @@
+ @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 100px; 
+}
+
+
+
+ body {
+     font-family: 'Inter', sans-serif;
+     background-color: #fafafa;
+     color: #2c2c2c;
+     line-height: 1.6;
+ }
+
+ /* Navigation */
+ nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #1a1a1a;
+     color: #ffffff;
+     padding: 20px 40px;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+     position: fixed;
+     width: 100%;
+     top: 0;
+     z-index: 1000;
+ }
+
+
+nav a.active {
+    color: #d4af37;
+    background-color: rgba(212, 175, 55, 0.08);
+}
+
+nav a.active::after {
+    width: 80%;
+}
+
+
+
+ #logo {
+     display: flex;
+     align-items: center;
+     flex: 0 0 auto;
+ }
+
+ #logo img {
+     width: 160px;
+     height: 80px;
+     margin-right: 20px;
+     border-radius: 4px;
+ }
+
+ .logo-text {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .logo-text h3 {
+     font-family: 'Crimson Text', serif;
+     font-size: 1.8rem;
+     font-weight: 600;
+     color: #ffffff;
+     margin: 0;
+     letter-spacing: 0.5px;
+ }
+
+ .subtitle {
+     font-family: 'Inter', sans-serif;
+     font-size: 0.85rem;
+     font-weight: 300;
+     color: #b8b8b8;
+     margin: 2px 0 0 0;
+     letter-spacing: 0.3px;
+ }
+
+ .liens-nav {
+     display: flex;
+     justify-content: flex-end;
+     gap: 35px;
+     flex: 1;
+ }
+
+ nav a {
+     font-family: 'Inter', sans-serif;
+     color: #ffffff;
+     text-decoration: none;
+     font-weight: 400;
+     font-size: 0.95rem;
+     padding: 8px 16px;
+     border-radius: 4px;
+     transition: all 0.3s ease;
+     letter-spacing: 0.2px;
+     position: relative;
+ }
+
+ nav a:hover {
+     color: #d4af37;
+     background-color: rgba(212, 175, 55, 0.08);
+ }
+
+ nav a::after {
+     content: '';
+     position: absolute;
+     bottom: -2px;
+     left: 50%;
+     width: 0;
+     height: 2px;
+     background-color: #d4af37;
+     transition: all 0.3s ease;
+     transform: translateX(-50%);
+ }
+
+ nav a:hover::after {
+     width: 80%;
+ }
+
+ /* Titres des pages tout soit pareil */
+.titre-section,
+.section-apropos h2,
+.atout h3,
+.carte-expertise h3,
+.temoignage::before,
+.infos-contact h3 {
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #2c3e50; 
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/* Barre décorative sous le titre */
+.titre-section::after,
+.section-apropos h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #c29d5a;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+
+ /* Section Hero */
+ .section-accueil {
+     display: flex;
+     justify-content: center;
+     padding: 120px 0 80px;
+     background-color: #f8f8f8;
+     margin-top: 6%;
+
+ }
+
+ .section-accueil .card-body {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     height: 100%;
+ }
+
+
+
+ .bouton-cta {
+     display: inline-block;
+     background-color: #d4af37;
+     color: #1a1a1a;
+     padding: 18px 45px;
+     text-decoration: none;
+     font-weight: 600;
+     border-radius: 12px;
+     transition: all 0.3s ease;
+     font-size: 1.1rem;
+     letter-spacing: 0.5px;
+     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+ }
+
+ .bouton-cta:hover {
+     background-color: #b8941f;
+     transform: translateY(-3px);
+     box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+ }
+
+ /* Container */
+ .conteneur {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 0 20px;
+ }
+
+ /* Section styles */
+ section {
+     padding: 80px 0;
+ }
+
+ .titre-section {
+     font-family: 'Crimson Text', serif;
+     font-size: 2.5rem;
+     text-align: center;
+     margin-bottom: 60px;
+     color: #1a1a1a;
+     font-weight: 600;
+ }
+
+ /* Pourquoi nous choisir */
+ .atouts {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 40px;
+ }
+
+ .atout {
+     text-align: center;
+     padding: 40px 30px;
+     background: white;
+     border-radius: 12px;
+     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+     transition: transform 0.3s ease;
+ }
+
+ .atout:hover {
+     transform: translateY(-5px);
+ }
+
+ .atout i {
+     font-size: 3rem;
+     color: #d4af37;
+     margin-bottom: 20px;
+ }
+
+ .atout h3 {
+     font-family: 'Crimson Text', serif;
+     font-size: 1.5rem;
+     margin-bottom: 15px;
+     color: #1a1a1a;
+ }
+
+ .atout p {
+     color: #666;
+     line-height: 1.6;
+ }
+
+ /* Domaines d'expertise */
+ .section-expertise {
+     background-color: #f8f8f8;
+ }
+
+ .grille-expertise {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 30px;
+ }
+
+ .carte-expertise {
+     background: white;
+     padding: 40px 30px;
+     border-radius: 12px;
+     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+     transition: all 0.3s ease;
+     border-top: 4px solid #d4af37;
+ }
+
+ .carte-expertise:hover {
+     transform: translateY(-8px);
+     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+ }
+
+ .carte-expertise h3 {
+     font-family: 'Crimson Text', serif;
+     font-size: 1.4rem;
+     margin-bottom: 15px;
+     color: #1a1a1a;
+ }
+
+ .carte-expertise p {
+     color: #666;
+     margin-bottom: 20px;
+ }
+
+ .carte-expertise a {
+     color: #d4af37;
+     text-decoration: none;
+     font-weight: 500;
+     transition: color 0.3s ease;
+ }
+
+ .carte-expertise a:hover {
+     color: #b8941f;
+ }
+
+ /* Témoignages */
+ .temoignages {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+     gap: 40px;
+ }
+
+ .temoignage {
+     background: white;
+     padding: 40px;
+     border-radius: 12px;
+     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+     position: relative;
+ }
+
+ .temoignage::before {
+     content: '"';
+     font-size: 4rem;
+     color: #d4af37;
+     position: absolute;
+     top: 10px;
+     left: 20px;
+     font-family: 'Crimson Text', serif;
+ }
+
+ .temoignage p {
+     font-style: italic;
+     margin-bottom: 20px;
+     margin-left: 30px;
+     color: #444;
+ }
+
+ .auteur-temoignage {
+     font-weight: 600;
+     color: #1a1a1a;
+     margin-left: 30px;
+ }
+
+ .section-honoraires {
+     background-color: #f8f9fa;
+ }
+
+ /* Honoraires */
+
+.section-honoraires {
+    background-color: #f8f9fa; 
+    padding: 60px 0;
+}
+
+.section-honoraires h2 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2c3e50; 
+    position: relative;
+}
+
+.section-honoraires h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #c29d5a; 
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.section-honoraires .card {
+    border: none;
+    border-radius: 12px;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.section-honoraires .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.section-honoraires .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.section-honoraires .card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.section-honoraires .price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #c29d5a;
+    margin-top: 10px;
+}
+
+
+
+ /* Contact */
+ .section-contact {
+     background-color: #1a1a1a;
+     color: white;
+ }
+
+ .section-contact .titre-section {
+     color: white;
+ }
+
+ .contenu-contact {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 60px;
+ }
+
+ .infos-contact h3 {
+     font-family: 'Crimson Text', serif;
+     font-size: 1.5rem;
+     margin-bottom: 30px;
+     color: #d4af37;
+ }
+
+ .element-contact {
+     display: flex;
+     align-items: center;
+     margin-bottom: 20px;
+ }
+
+ .element-contact i {
+     color: #d4af37;
+     margin-right: 15px;
+     font-size: 1.2rem;
+     width: 20px;
+ }
+
+ .formulaire-contact {
+     background: rgba(255, 255, 255, 0.05);
+     padding: 40px;
+     border-radius: 12px;
+ }
+
+ .formulaire-contact input,
+ .formulaire-contact textarea {
+     width: 100%;
+     padding: 15px;
+     margin-bottom: 20px;
+     border: none;
+     border-radius: 8px;
+     background: rgba(255, 255, 255, 0.1);
+     color: white;
+     font-family: 'Inter', sans-serif;
+ }
+
+ .formulaire-contact input::placeholder,
+ .formulaire-contact textarea::placeholder {
+     color: rgba(255, 255, 255, 0.7);
+ }
+
+ .formulaire-contact button {
+     background-color: #d4af37;
+     color: #1a1a1a;
+     padding: 15px 40px;
+     border: none;
+     border-radius: 8px;
+     font-weight: 600;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     width: 100%;
+ }
+
+ .formulaire-contact button:hover {
+     background-color: #b8941f;
+ }
+
+ /* Responsive */
+ @media (max-width: 768px) {
+     .contenu-hero h1 {
+         font-size: 2.5rem;
+     }
+
+     .carte-hero {
+         flex-direction: column;
+         gap: 0;
+     }
+
+     .image-hero {
+         min-height: 300px;
+     }
+
+     .contenu-hero {
+         padding: 40px 30px;
+     }
+
+     .contenu-contact {
+         grid-template-columns: 1fr;
+         gap: 40px;
+     }
+
+     nav {
+         padding: 15px 20px;
+     }
+
+     .liens-nav {
+         gap: 20px;
+     }
+ }
+
+ .antalyax {
+     text-align: center;
+     font-size: 0.8rem;
+     color: #ffffff;
+     background-color: #212020;
+     position: relative;
+        padding: 20px 0;
+ }
