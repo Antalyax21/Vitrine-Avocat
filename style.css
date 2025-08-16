@@ -515,11 +515,104 @@ nav a.active::after {
      }
  }
 
- .antalyax {
-     text-align: center;
-     font-size: 0.8rem;
-     color: #ffffff;
-     background-color: #212020;
-     position: relative;
-        padding: 20px 0;
- }
+ /* Modales */
+.modal-content {
+    background-color: #505152; /* Fond clair */
+    border-radius: 12px;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    color: #2c2c2c;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-top: 4px solid #d4af37; /* Bande dorée en haut */
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-title {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #c29d5a; /* Titre doré */
+}
+
+.modal-body p,
+.modal-body input,
+.modal-body textarea {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #d4d4d4;
+}
+
+.modal-body input,
+.modal-body textarea {
+    border: 1px solid #d4af37; /* Bordure dorée */
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.modal-body input:focus,
+.modal-body textarea:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.5); /* Glow doré */
+}
+
+.modal-footer {
+    border-top: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-footer .btn {
+    background-color: #d4af37;
+    color: #1a1a1a;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+}
+
+.modal-footer .btn:hover {
+    background-color: #b8941f;
+}
+
+
+
+
+
+/* ===== Footer ===== */
+.footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer-socials a {
+    margin: 0 10px;
+    font-size: 1.2rem;
+    color: rgba(212, 175, 55, 0.8);
+    transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #d4af37;
+}
+
+.footer-links {
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+.footer-links a {
+    color: rgba(212, 175, 55, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #d4af37;
+    text-decoration: underline;
+}
