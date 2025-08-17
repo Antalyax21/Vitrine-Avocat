@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabinet Maître Example - Avocat Paris</title>
+    <title>Avocats spécialisé en droit civil et pénal - Cabinet Example</title>
+    <meta name="description"
+        content="Cabinet Example, avocats au Barreau de Paris, spécialisés en droit civil et pénal. 1er consultation gratuite. Contactez-nous !">
+    <meta name="keywords"
+        content="avocat, droit civil, droit pénal, litige, consultation juridique, cabinet avocat, assistance juridique, conseil avocat">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -237,16 +242,27 @@
                         <span>Lun-Ven : 9h-18h | Sam : 9h-12h</span>
                     </div>
                 </div>
-                <div class="formulaire-contact">
-                    <form>
-                        <input type="text" placeholder="Nom et prénom" required>
-                        <input type="email" placeholder="Email" required>
-                        <input type="tel" placeholder="Téléphone" required>
-                        <textarea rows="5" placeholder="Décrivez brièvement votre situation juridique"
+                <div class="formulaire-contact" name="form">
+                    <form class="form" method="post">
+                        <input type="text" placeholder="Nom et prénom" id="np" required>
+                        <span class="errorMessage" id="npError"></span>
+
+                        <input type="email" placeholder="Email" id="email" required>
+                        <span class="errorMessage" id="emailError"></span>
+
+                        <input type="tel" placeholder="Téléphone" id="tel" required>
+                        <span class="errorMessage" id="telError"></span>
+
+                        <textarea id="message" rows="5" placeholder="Décrivez brièvement votre situation juridique"
                             required></textarea>
+                        <div id="char-count">200 caractères restants</div>
+
+                        <span class="errorMessage" id="messageError"></span>
+
                         <button type="submit">Envoyer ma demande</button>
                     </form>
                 </div>
+
             </div>
         </div>
 
